@@ -5,11 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Angular.Material" Version="1.1.7" />
+    <PackageReference Include="AngularJS.Cookies" Version="1.7.5" />
+    <PackageReference Include="AngularJS.Messages" Version="1.7.5" />
+    <PackageReference Include="AngularJS.Resource" Version="1.7.5" />
+    <PackageReference Include="AngularJS.Route" Version="1.7.5" />
+    <PackageReference Include="AngularJS.Sanitize" Version="1.7.5" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="1.0.172" />
   </ItemGroup>
 
 </Project>

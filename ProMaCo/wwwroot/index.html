@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/angular-material.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/ProMaCo.css" />
+</head>
+<body ng-app="ProMaCoApp" ng-controller="MainController as mc" layout="column">
+    <md-toolbar layout="row">
+        <md-button class="menu" ng-click="mc.toggleSideBar()" hide-gt-sm>
+            <i class="material-icons">menu</i>
+        </md-button>
+        <h3>ProMaCo System</h3>
+    </md-toolbar>
+    <div class="container" layout="row" flex>
+        <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-4dp" md-component-id="leftSideNav">
+            <md-list ng-click="mc.toggleSideBar()">
+                <md-list-item>
+                    <md-button layout="row" href="#!BankReceipt">
+                        <i class="material-icons">home</i>
+                        Home
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button layout="row" href="#!red">
+                        <i class="material-icons">home</i>
+                        red
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button layout="row" href="#!blue">
+                        <i class="material-icons">home</i>
+                        blue
+                    </md-button>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+        <md-content id="content" flex>
+            <ng-view>
+
+            </ng-view>
+        </md-content>
+    </div>
+
+    <script type="text/javascript" language="JavaScript" src="js/angular.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/angular-animate.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/angular-aria.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/angular-material.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/ProMaCoApp.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/Controllers/BankReceipt.js"></script>
+</body>
+</html>

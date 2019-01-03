@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "defaultDestination": "wwwroot/",
+  "libraries": [
+    {
+      "provider": "filesystem",
+      "library": "C:\\Users\\user\\.nuget\\packages\\angularjs.core\\1.7.5\\content\\Scripts\\",
+      "files": [ "angular-mocks.js", "angular.js", "angular.min.js", "angular.min.js.map" ],
+      "destination": "wwwroot/js/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "C:\\Users\\user\\.nuget\\packages\\angularjs.animate\\1.7.5\\content\\Scripts\\",
+      "files": [ "angular-animate.js", "angular-animate.min.js", "angular-animate.min.js.map" ],
+      "destination": "wwwroot/js/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "C:\\Users\\user\\.nuget\\packages\\angularjs.aria\\1.7.5\\content\\Scripts\\",
+      "files": [ "angular-aria.js", "angular-aria.min.js", "angular-aria.min.js.map" ],
+      "destination": "wwwroot/js/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "C:\\Users\\user\\.nuget\\packages\\angular.material\\1.1.7\\content\\Scripts\\",
+      "files": [ "angular-material-mocks.js", "angular-material.js", "angular-material.min.js" ],
+      "destination": "wwwroot/js/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "C:\\Users\\user\\.nuget\\packages\\angularjs.route\\1.7.5\\content\\Scripts\\",
+      "files": [ "angular-route.js", "angular-route.min.js", "angular-route.min.js.map" ],
+      "destination": "wwwroot/js/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "C:\\Users\\user\\.nuget\\packages\\angular.material\\1.1.7\\content\\Content\\",
+      "files": [ "angular-material.css", "angular-material.layout-attributes.css", "angular-material.layout-attributes.min.css", "angular-material.layouts.css", "angular-material.layouts.ie_fixes.css", "angular-material.layouts.min.css", "angular-material.min.css" ],
+      "destination": "wwwroot/css/"
+    }
+  ]
+}

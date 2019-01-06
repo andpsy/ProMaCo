@@ -1,65 +1,73 @@
-﻿<div ng-controller="BankReceipt" layout="column" ng-cloak class="md-inline-form">
+﻿<div ng-controller="BankReceipt as brc" layout="column" ng-cloak class="md-inline-form">
     <md-content layout-padding>
         <div>
-            <form name="userForm">
+            <form name="formBankReceipt">
                 <div layout-gt-xs="row">
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label id="labelInvoice">Invoice</label>
+                        <label for="comboBoxInvoice" set-label id="labelInvoice">Invoice</label>
                         <md-select id="comboBoxInvoice" ng-model="model.InvoiceId">
-                            <md-option ng-repeat="" value="">
+                            <md-option ng-repeat="x in brc.testData" ng-value="x.id">
+                                {{x.nume}}
                             </md-option>
                         </md-select>
                     </md-input-container>
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label id="labelOwner">Owner</label>
-                        <md-select ng-model="model.OwnerId">
-                            <md-option ng-repeat="" value="">
+                        <label for="comboBoxOwner" set-label id="labelOwner">Owner</label>
+                        <md-select id="comboBoxOwner" ng-model="model.OwnerId">
+                            <md-option ng-repeat="x in brc.testData" ng-value="x.id">
+                                {{x.nume}}
                             </md-option>
                         </md-select>
                     </md-input-container>
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label id="labelInvoiceExtractNumber">Extract number</label>
+                        <label set-label id="labelExtractNumber">Extract number</label>
                         <input ng-model="model.ExtractNumber">
                     </md-input-container>
                 </div>
                 <div layout-gt-xs="row">
                     <md-input-container>
-                        <label id="labelExtractDate">Extract date</label>
+                        <label set-label id="labelExtractDate">Extract date</label>
                         <md-datepicker id="dateTimePickerExtractDate" ng-model="model.ExtractDate"></md-datepicker>
                     </md-input-container>
                     <md-input-container>
-                        <label id="labelDate">Date</label>
+                        <label set-label id="labelDate">Date</label>
                         <md-datepicker id="dateTimePickerDate" ng-model="model.Date"></md-datepicker>
                     </md-input-container>
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label id="labelAmount">Amount</label>
+                        <label set-label id="labelAmount">Amount</label>
                         <input ng-model="model.Amount">
                     </md-input-container>
                 </div>
                 <div layout-gt-xs="row" layout-align="center center">
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label id="labelBankAccount">Bank account</label>
-                        <md-select ng-model="model.BankAccountId">
-                            <md-option ng-repeat="" value="">
+                        <label set-label id="labelBankAccount">Bank account</label>
+                        <md-select id="comboBoxBankAccount" ng-model="model.BankAccountId">
+                            <md-option ng-repeat="x in brc.testData" ng-value="x.id">
+                                {{x.nume}}
                             </md-option>
                         </md-select>
                     </md-input-container>
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label id="labelProperty">Property</label>
-                        <md-select ng-model="model.PropertyId">
-                            <md-option ng-repeat="" value="">
+                        <label set-label id="labelProperty">Property</label>
+                        <md-select id="comboBoxProperty" ng-model="model.PropertyId">
+                            <md-option ng-repeat="x in brc.testData" ng-value="x.id">
+                                {{x.nume}}
                             </md-option>
                         </md-select>
                     </md-input-container>
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label id="labelComments">Comments</label>
+                        <label set-label id="labelComments">Comments</label>
                         <textarea ng-model="model.Comments" md-maxlength="150" rows="3" md-select-on-focus></textarea>
                     </md-input-container>
                 </div>
                 <div layout-gt-xs="row">
                     <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                        <md-button layout="row" class="md-raised md-primary"><i class="material-icons">save</i>Save</md-button>
-                        <md-button layout="row" class="md-raised"><i class="material-icons">cancel</i>Cancel</md-button>
+                        <md-button id="buttonSave" layout="row" class="md-raised md-primary">
+                            <md-icon md-svg-src="img/svg_icons/content/production/ic_save_48px.svg"></md-icon><span set-label id ="labelButtonSave" md-menu-align-target>Save</span>
+                        </md-button>
+                        <md-button id="buttonCancel" layout="row" class="md-raised">
+                            <md-icon md-svg-src="img/svg_icons/content/production/ic_clear_48px.svg"></md-icon><span set-label id ="labelButtonCancel" md-menu-align-target>Cancel</span>
+                        </md-button>
                     </section>
                 </div>
             </form>

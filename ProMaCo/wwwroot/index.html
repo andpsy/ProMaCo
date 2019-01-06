@@ -7,34 +7,9 @@
     <link rel="stylesheet" href="css/ProMaCo.css" />
 </head>
 <body ng-app="ProMaCoApp" ng-controller="MainController as mc" layout="column">
-    <md-toolbar layout="row">
-        <md-button class="menu" ng-click="mc.toggleSideBar()" hide-gt-sm>
-            <i class="material-icons">menu</i>
-        </md-button>
-        <h3>ProMaCo System</h3>
-    </md-toolbar>
+    <div ng-include="'html/Header.html'"></div>
     <div class="container" layout="row" flex>
-        <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-4dp" md-component-id="leftSideNav">
-            <md-list ng-click="mc.toggleSideBar()">
-                <md-list-item>
-                    <md-button layout="row" href="#!BankReceipt">
-                        <i class="material-icons">home</i>
-                        Home
-                    </md-button>
-                </md-list-item>
-                <md-list-item>
-                    <md-button layout="row" href="#!red">
-                        <i class="material-icons">home</i>
-                        red
-                    </md-button>
-                </md-list-item>
-                <md-list-item>
-                    <md-button layout="row" href="#!blue">
-                        <i class="material-icons">home</i>
-                        blue
-                    </md-button>
-                </md-list-item>
-            </md-list>
+        <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-4dp" md-component-id="leftSideNav" ng-include="'html/SideBar.html'">
         </md-sidenav>
         <md-content id="content" flex>
             <ng-view>
@@ -43,12 +18,19 @@
         </md-content>
     </div>
 
+    <script type="text/javascript" language="JavaScript" src="lang/ro.js"></script>
+    <script type="text/javascript" language="JavaScript" src="lang/en.js"></script>
     <script type="text/javascript" language="JavaScript" src="js/angular.min.js"></script>
     <script type="text/javascript" language="JavaScript" src="js/angular-route.min.js"></script>
     <script type="text/javascript" language="JavaScript" src="js/angular-animate.min.js"></script>
     <script type="text/javascript" language="JavaScript" src="js/angular-aria.min.js"></script>
     <script type="text/javascript" language="JavaScript" src="js/angular-material.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/angular-messages.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/angular-local-storage.min.js"></script>
     <script type="text/javascript" language="JavaScript" src="js/ProMaCoApp.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/Services/AuthService.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/Controllers/LoginController.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/Controllers/SignupController.js"></script>
     <script type="text/javascript" language="JavaScript" src="js/Controllers/BankReceipt.js"></script>
 </body>
 </html>

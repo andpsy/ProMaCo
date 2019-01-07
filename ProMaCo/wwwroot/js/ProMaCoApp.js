@@ -5,8 +5,8 @@ app.config(function ($routeProvider) {
         .when("/", {
             templateUrl: "main.htm"
         })
-        .when("/BankReceipt", {
-            templateUrl: "/html/BankReceipt.html"
+        .when("/CoOwners", {
+            templateUrl: "/html/CoOwners.html"
         })
         .when("/red", {
             templateUrl: "/html/red.html"

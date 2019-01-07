@@ -1,0 +1,36 @@
+﻿<div ng-controller="Banks" layout="column" ng-cloak class="md-inline-form">
+    <md-content layout-padding>
+        <div>
+            <form name="userForm">
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label id="labelName">Name</label>
+                        <input ng-model="model.Name">
+                    </md-input-container>
+                </div>
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label id="labelDetails">Details</label>
+                        <textarea ng-model="model.Details" md-maxlength="150" rows="3" md-select-on-focus></textarea>
+                    </md-input-container>
+                </div>
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label id="labelBanksAgencies">Bank's Agencies</label>
+                        <md-select ng-model="model.BanksAgenciesId">
+                            <md-option ng-repeat="" value="">
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div layout-gt-xs="row">
+                    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                        <md-button layout="row" class="md-raised md-primary"><i class="material-icons">save</i>Save</md-button>
+                        <md-button layout="row" class="md-raised"><i class="material-icons">cancel</i>Cancel</md-button>
+                    </section>
+                </div>
+            </form>
+        </div>
+    </md-content>
+</div>
+

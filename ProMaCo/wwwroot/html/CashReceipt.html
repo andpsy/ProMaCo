@@ -1,0 +1,55 @@
+﻿<div ng-controller="CashReceipt" layout="column" ng-cloak class="md-inline-form">
+    <md-content layout-padding>
+        <div>
+            <form name="userForm">
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label id="labelInvoice">Invoice</label>
+                        <md-select id="comboBoxInvoice" ng-model="model.InvoiceId">
+                            <md-option ng-repeat="" value="">
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label id="labelSeries">Series</label>
+                        <input ng-model="model.Series">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label id="labelNumber">Number</label>
+                        <input ng-model="model.Number">
+                    </md-input-container>
+                </div>
+                <div layout-gt-xs="row">
+                    <md-input-container>
+                        <label id="labelDate">Date</label>
+                        <md-datepicker id="dateTimePickerDate" ng-model="model.Date"></md-datepicker>
+                    </md-input-container>
+                    <md-input-container>
+                        <label id="labelAmount">Amount</label>
+                        <input ng-model="model.Amount">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label id="labelCurrency">Currency</label>
+                        <md-select ng-model="model.CurrencyId">
+                            <md-option ng-repeat="" value="">
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div layout-gt-xs="row" layout-align="center center">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label id="labelComments">Comments</label>
+                        <textarea ng-model="model.Comments" md-maxlength="150" rows="3" md-select-on-focus></textarea>
+                    </md-input-container>
+                </div>
+                <div layout-gt-xs="row">
+                    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                        <md-button layout="row" class="md-raised md-primary"><i class="material-icons">save</i>Save</md-button>
+                        <md-button layout="row" class="md-raised"><i class="material-icons">cancel</i>Cancel</md-button>
+                    </section>
+                </div>
+            </form>
+        </div>
+    </md-content>
+</div>
+

@@ -1,0 +1,17 @@
+﻿<md-toolbar layout="row">
+    <md-button aria-label="Toggle side bar" class="menu" ng-click="mc.toggleSideBar()" hide-gt-sm>
+        <md-icon md-svg-src="img/svg_icons/navigation/production/ic_menu_48px.svg"></md-icon>
+    </md-button>
+
+    <md-menu>
+        <md-button aria-label="Language menu" class="md-icon-button" ng-click="$mdMenu.open($event)">
+            <md-icon md-svg-src="{{language_pack.svg}}"></md-icon>
+        </md-button>
+        <md-menu-content width="1">
+            <md-menu-item ng-repeat="lp in language_packs">
+                <md-button layout="row" ng-click="changeLanguage(lp.language)"><md-icon md-svg-src="{{lp.svg}}"></md-icon> <span md-menu-align-target>{{lp.language}}</span> </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+    <h4>ProMaCo System</h4>
+</md-toolbar>

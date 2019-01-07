@@ -1,0 +1,38 @@
+﻿    <div layout="column" layout-align="center center" layout-fill="layout-fill" ng-controller="LoginController">
+        <div layout="column" class="loginBox md-whiteframe-z1">
+            <md-toolbar>
+                <h3 class="md-toolbar-tools"><span>Login</span></h3>
+            </md-toolbar>
+            <form name="formLogin">
+                <md-content layout="column" class="md-padding">
+                    <md-input-container>
+                        <label set-label id="labelUserName">User name</label>
+                        <input required type="text" ng-model="loginData.userName" name="username" />
+                        <div ng-messages="formLogin.username.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container>
+                        <label set-label id="labelPassword" ng-init="getLabel('')">Password</label>
+                        <input required type="password" ng-model="loginData.userName" name="password" />
+                        <div ng-messages="formLogin.password.$error" role="alert">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    <div layout="row" layout-align="center center">
+                        <md-button id="buttonLogin" class="md-raised md-primary" ng-click="login()">
+                            <span set-label id="labelButtonLogin" md-menu-align-target>Login</span>
+                        </md-button>
+                        <div flex="flex"></div>
+                        <md-button id="buttonForgotPassword" href="" md-no-ink>
+                            <span set-label id="labelButtonForgotPassword" md-menu-align-target>Forgot password</span>
+                        </md-button>
+                    </div>
+                    <md-divider></md-divider>
+                    <md-button id="buttonSignUp" href="#" md-no-ink>
+                        <span set-label id="labelButtonSignUp" md-menu-align-target>Sign Up</span>
+                    </md-button>
+                </md-content>
+            </form>
+        </div>
+    </div>
